@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio | Portafolio Personal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">Portafolio Profesional</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="activo">Inicio</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Hola, soy Andrés </h1>
+      <p>
+        Estudiante universitario apasionado por aprender sobre desarrollo WEB y la resolución de problemas. Bienvenido a mi espacio digital.
+      </p>
+      <a href="proyectos.html" class="btn">Ver mis proyectos</a>
+    </section>
+
+    <section class="contacto-seccion" id="contacto">
+      <h2>Contáctame</h2>
+      <p>¿Tienes alguna duda o propuesta de proyecto? Envíame un mensaje y te responderé a la brevedad.</p>
+
+      <!-- Reemplaza TU_ID_DE_FORMSPREE con el identificador de tu formulario de Formspree. -->
+      <form action="https://formspree.io/f/xrpqolwj" method="POST" class="formulario-contacto">
+        <div class="campo-grupo">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana López" autocomplete="name" required>
+        </div>
+
+        <div class="campo-grupo">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="tu@correo.com" autocomplete="email" required>
+        </div>
+
+        <div class="campo-grupo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-enviar">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Andrés Islas · Desarrollado con HTML, CSS y Scrum.</p>
+  </footer>
+</body>
+</html>

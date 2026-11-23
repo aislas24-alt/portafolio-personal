@@ -1,0 +1,299 @@
+/* Variables de paleta de colores y tipografía (Tarea 3) */
+:root {
+  --color-primario: #1e3a8a;      /* Azul marino profesional */
+  --color-secundario: #3b82f6;    /* Azul acento */
+  --color-fondo: #f8fafc;         /* Gris muy claro */
+  --color-tarjeta: #ffffff;
+  --color-texto: #1e293b;
+  --color-texto-suave: #64748b;
+  --borde-radio: 8px;
+  --sombra: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navegación */
+header {
+  background-color: var(--color-primario);
+  color: white;
+  padding: 1rem 5%;
+  box-shadow: var(--sombra);
+}
+
+nav {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.activo {
+  color: #ffffff;
+  border-bottom: 2px solid var(--color-secundario);
+  padding-bottom: 2px;
+}
+
+/* Contenedor principal */
+main {
+  flex: 1;
+  max-width: 1000px;
+  width: 90%;
+  margin: 2.5rem auto;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--color-primario);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: var(--color-primario);
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Sección Hero (Inicio) */
+.hero {
+  background: var(--color-tarjeta);
+  padding: 3rem 2rem;
+  border-radius: var(--borde-radio);
+  box-shadow: var(--sombra);
+  text-align: center;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+  color: var(--color-texto-suave);
+  font-size: 1.1rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--color-secundario);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--borde-radio);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--color-primario);
+}
+
+/* Página Sobre mí */
+.perfil-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  background: var(--color-tarjeta);
+  padding: 2rem;
+  border-radius: var(--borde-radio);
+  box-shadow: var(--sombra);
+  align-items: center;
+}
+
+.avatar-placeholder {
+  background-color: #dbeafe;
+  color: var(--color-primario);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  background-color: #e0e7ff;
+  color: var(--color-primario);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Página Proyectos (3 tarjetas) */
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.tarjeta {
+  background: var(--color-tarjeta);
+  border-radius: var(--borde-radio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-img {
+  background-color: #cbd5e1;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #475569;
+  font-weight: 600;
+}
+
+.tarjeta-contenido {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tarjeta-contenido p {
+  font-size: 0.95rem;
+  color: var(--color-texto-suave);
+}
+
+/* Pie de página */
+footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+/* Responsividad (Celulares y tablets - Tarea 7) */
+@media (max-width: 768px) {
+  .perfil-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .habilidades {
+    justify-content: center;
+  }
+
+  .proyectos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+}
+/* Formulario de contacto (Tarea 8 - Sprint 2) */
+.contacto-seccion {
+  background: var(--color-tarjeta);
+  padding: 2rem;
+  border-radius: var(--borde-radio);
+  box-shadow: var(--sombra);
+  margin-top: 2.5rem;
+}
+
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin-top: 1rem;
+}
+
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.campo-grupo label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-texto);
+}
+
+.campo-grupo input,
+.campo-grupo textarea {
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--borde-radio);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.campo-grupo input:focus,
+.campo-grupo textarea:focus {
+  outline: none;
+  border-color: var(--color-secundario);
+}
+
+.btn-enviar {
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+  font-size: 1rem;
+}
+
+.nav-links a:focus-visible,
+.logo:focus-visible,
+.btn:focus-visible,
+.campo-grupo input:focus-visible,
+.campo-grupo textarea:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
